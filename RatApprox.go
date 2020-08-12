@@ -48,6 +48,9 @@ func RatApprox (input float64) Fraction{
 	return mid
 }
 
+/*
+just do main stuff in here
+*/
 func main () {
 	var x float64
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
