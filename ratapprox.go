@@ -1,10 +1,4 @@
-package main
-
-import (
-	"fmt"
-	"math/rand"
-	"time"
-)
+package ratapprox
 
 //Fraction defines a new type representing a fraction with a numerator and a denominator stored as indipendent values
 type Fraction struct {
@@ -37,7 +31,6 @@ func RatApprox(input float64) Fraction {
 		mid = farey(low, high)
 		var comp float64 = mid.divFraction()
 		if comp == input {
-			fmt.Println(i)
 			return mid
 		} else if comp < input {
 			low = mid
@@ -46,17 +39,4 @@ func RatApprox(input float64) Fraction {
 		}
 	}
 	return mid
-}
-
-/*
-just do main stuff in here
-*/
-func main() {
-	var x float64
-	r := rand.New(rand.NewSource(time.Now().UnixNano()))
-	x = r.Float64()
-	//x = math.Pi / 10
-	fmt.Println(x)
-	result := RatApprox(x)
-	fmt.Println(result, result.divFraction())
 }
