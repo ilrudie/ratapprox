@@ -1,3 +1,3 @@
-module rudie.us/ratapprox
+module github.com/ilrudie/ratapprox
 
 go 1.14
